@@ -1,0 +1,13 @@
+Subject: Secret Santa
+
+Hi {name},
+
+This is an example of e-mail.
+The gift must be less than 80$.
+It will be exchanged next friday.
+
+You must give your gift to {to-full}.
+ 
+SPOILER: If you want to know who will give the gift to you, you should wait it from {from-full}.
+
+End of Example... ;)

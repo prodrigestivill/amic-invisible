@@ -1,0 +1,7 @@
+Name Person Group 1	Some optional comments	email@example.com
+Another from Group 1		email@example.com
+
+Name Person Group 2		email@example.com,email2@example.com
+Another from Group 2	son of NPG2	email@example.com,email2@example.com,email3@example.com
+
+#Comment: people from the same group will never exchange gifts between them
