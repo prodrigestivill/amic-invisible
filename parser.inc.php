@@ -38,7 +38,7 @@ function getBody($filename, &$from){
 	$replacements[] = $from["comments"];
 	$patterns[] = "/{email}/";
 	$replacements[] = implode(",",$from["emails"]);
-	$patterns[] = "/{to-full}/";
+	$patterns[] = "/{full}/";
 	if (strlen($from["comments"])>0)
 		$replacements[] = $from["name"]." (".$from["comments"].")";
 	else

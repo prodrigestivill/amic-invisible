@@ -1,5 +1,3 @@
-Subject: Secret Santa
-
 Hi {name},
 
 This is an example of e-mail.

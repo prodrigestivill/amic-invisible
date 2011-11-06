@@ -10,17 +10,19 @@ require("relations.inc.php");
 
 $times = fillRelations($arr, $total);
 
+require("send-conf.inc.php");
 foreach ($arr as &$persons){
 	foreach ($persons as &$p){
+		echo "MAIL FROM: $email_from\r\n";
 		foreach($p["emails"] as $e)
 			echo "RCPT TO:<$e>\r\n";
-		echo "DATA\r\nTo: ";
+		echo "DATA\r\nFrom: $email_from\r\nTo: ";
 		$c="";
 		foreach($p["emails"] as $e){
 			echo "$c\"".$p["name"]."\" <$e>";
 			$c=",";
 		}
-		echo "\r\n";
+		echo "\r\nSubject: $email_subject\r\n";
 		echo getBody($bodyfile, $p);
 		echo "\r\n.\r\n";
 	}
