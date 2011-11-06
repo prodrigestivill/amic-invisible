@@ -39,7 +39,7 @@ foreach ($arr as &$persons){
 		$mail = $smtp->send($to, $headers, $body);
 		if (PEAR::isError($mail)) {
 			echo("Error while sending to ".$p["name"].": ".$mail->getMessage()."\n");
-			echo("  -> Pengin to send this association: ".$p["name"]." -> ".$p["to"]["name"]."\n");
+			echo("  -> Pending to send this association: ".$p["name"]." -> ".$p["to"]["name"]."\n");
 		} else {
 			echo("Message successfully sent to ".$p["name"]."\n");
 		}
