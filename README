@@ -3,5 +3,9 @@ Amigo Invisible
 Secret Santa
 
 Tools to send mails with this kind of game.
-Replace list.txt and body.txt following the examples.
-Run the app using php-cli.
+Replace list.txt and configure send-conf.inc.php following the examples.
+Run the app using php-cli:
+
+php relations-test.php [list.txt]
+php send-test.php [list.txt] [send-conf.inc.php]
+php send.php [list.txt] [send-conf.inc.php]
