@@ -30,7 +30,7 @@ function import_data($filename, &$ret){
 	return $total;
 }
 
-function getBody($filename, &$from){
+function getBody($body, &$from){
 	$patterns = array();
 	$patterns[] = "/{name}/";
 	$replacements[] = $from["name"];
@@ -68,6 +68,6 @@ function getBody($filename, &$from){
 	else
 		$replacements[] = $from["from"]["name"];
 
-	return preg_replace($patterns, $replacements, file_get_contents($filename));
+	return preg_replace($patterns, $replacements, $body);
 }
 ?>
