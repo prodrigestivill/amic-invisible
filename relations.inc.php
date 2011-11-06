@@ -28,13 +28,13 @@ function fillRelations(&$arr, $total){
 			}
 			foreach ($arr[$gid] as &$p){
 				if (count($avaliable)>0){
+					$avaliable=array_values($avaliable); //reset index
 					$pid = rand(0, count($avaliable)-1);
 					$pdst = &$avaliable[$pid];
 					$p["to"] = &$pdst;
 					$pdst["from"] = &$p;
 					$t--;
 					unset($avaliable[$pid]);
-					$avaliable=array_values($avaliable); //reset index
 				}
 			}
 		}
