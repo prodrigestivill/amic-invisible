@@ -7,8 +7,10 @@ $arr = array();
 $total = import_data($listfile, $arr);
 
 require("relations.inc.php");
-
 $times = fillRelations($arr, $total);
+if ($times<0)
+	die("Failed to find relations".PHP_EOL);
+
 echo "HELO server.example.org\r\n";
 require($mailfile);
 foreach ($arr as &$persons){
@@ -28,5 +30,5 @@ foreach ($arr as &$persons){
 	}
 }
 echo "QUIT\r\n";
-echo "Relation found in $times times.\n";
+echo "Relation found in $times times.".PHP_EOL;
 ?>

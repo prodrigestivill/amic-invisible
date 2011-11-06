@@ -6,10 +6,9 @@ $arr = array();
 $total = import_data($listfile, $arr);
 
 require("relations.inc.php");
-
 $times = fillRelations($arr, $total);
 if ($times<0)
-	die("Failed to find relations");
+	die("Failed to find relations".PHP_EOL);
 
 $first = null;
 foreach ($arr as &$persons){
@@ -24,7 +23,7 @@ if ($first!=null){
 		echo $cur["name"]." -> ";
 		$cur = &$cur["to"];
 	}while($first != $cur);
-	echo "...\n";
+	echo "...".PHP_EOL;
 }
-echo "Done $times times.\n";
+echo "Done $times times.".PHP_EOL;
 ?>
