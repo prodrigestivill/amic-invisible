@@ -14,6 +14,7 @@ $first = null;
 foreach ($arr as &$persons){
 	foreach ($persons as &$p){
 		$first = $p;
+		break;
 	}
 	break;
 }
