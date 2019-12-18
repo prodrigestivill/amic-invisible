@@ -1,0 +1,3 @@
+send-conf.inc.php
+*.txt
+!list.txt
